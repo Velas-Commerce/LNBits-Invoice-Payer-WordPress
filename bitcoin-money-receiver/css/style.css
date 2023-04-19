@@ -1,0 +1,9 @@
+.message-data span.error{
+	color:red;
+}
+.message-data span.success{
+	color:green;
+}
+.message-data {
+    margin-bottom: 10px;
+}
