@@ -4,7 +4,7 @@ require_once 'api_key.php'; // Include the api_key.php file
  * Plugin Name:       LNBits Bitcoin Lightning Network Invoice Payer
  * Plugin URI:        https://github.com/Velas-Commerce/LNBits-Invoice-Payer-WordPress/
  * Description:       Add Bitcoin rewards to your wordpress site by programmatically paying bolt 11 Lightning invoices using a low-risk LNBits wallet and API key.
- * Version:           1.2.1
+ * Version:           1.2.2
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            VelasCommerce
@@ -28,6 +28,8 @@ add_action('wp_footer', 'ln_bitcoin_widget_enqueue_script');
  */
 function wpdocs_theme_name_scripts() {
    wp_enqueue_style( 'custom-css', plugin_dir_url( __FILE__ ) . 'css/style.css' );
+   wp_enqueue_style( 'lightbox-css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css', array(), '2.11.3' );
+   wp_enqueue_script( 'lightbox-js', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js', array(), '2.11.3', true );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
